@@ -1,0 +1,7 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ProductViewModel>
+@{
+    Layout = "~/Views/master.cshtml";
+    await Html.RenderPartialAsync("~/Views/Partials/SectionHeader.cshtml");
+}
+
+@Model.ProductName

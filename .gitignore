@@ -1,0 +1,6 @@
+/.vs
+**/bin
+**/obj
+**/Package_Release
+**/publish
+**/node_modules

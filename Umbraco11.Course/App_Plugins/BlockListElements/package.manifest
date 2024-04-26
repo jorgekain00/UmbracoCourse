@@ -1,0 +1,6 @@
+{
+    "css":[],
+    "javascript":[
+        "~/App_Plugins/BlockListElements/Image/Image.controller.js"
+    ]
+}
