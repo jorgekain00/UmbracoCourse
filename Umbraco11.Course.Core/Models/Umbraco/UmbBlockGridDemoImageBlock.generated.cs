@@ -50,6 +50,14 @@ namespace Umbraco11.Course.Core.Models.Umbraco
 		// properties
 
 		///<summary>
+		/// Alternative Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.5.0+147b464")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("alternativeText")]
+		public virtual string AlternativeText => this.Value<string>(_publishedValueFallback, "alternativeText");
+
+		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.5.0+147b464")]
