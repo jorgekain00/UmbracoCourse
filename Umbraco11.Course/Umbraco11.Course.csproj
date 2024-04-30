@@ -31,6 +31,7 @@
   <ItemGroup>
     <None Include="App_Plugins\BlockListElements\Image\Image.controller.js" />
     <None Include="App_Plugins\BlockListElements\package.manifest" />
+    <None Include="App_Plugins\BlockListElements\RichText\RichText.controller.js" />
   </ItemGroup>
 
   <PropertyGroup>
