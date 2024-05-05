@@ -1,0 +1,8 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ProductListingViewModel>
+
+<div class="products-container">
+    @foreach(var product in Model.Products)    {
+        <strong>@product.id | @product.name</strong>
+        <img src="@product.imageUrl">
+    }
+</div>

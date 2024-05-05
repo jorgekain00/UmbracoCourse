@@ -23,7 +23,8 @@
 
         <div class="col-md-9">
             <article>
-                @await Html.GetBlockGridHtmlAsync(Model, "bodyText")
+                @await Html.GetBlockListHtmlAsync(Umbraco.AssignedContentItem,"blockListContentBody")
+				(Model, "bodyText")
             </article>
         </div>
     </div>
