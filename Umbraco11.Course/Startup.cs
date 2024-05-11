@@ -1,3 +1,6 @@
+using System.Reflection;
+using System.Text.Json.Serialization;
+
 namespace Umbraco11.Course
 {
     public class Startup
@@ -33,7 +36,11 @@ namespace Umbraco11.Course
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
-                .Build();
+                .Build()
+                ;
+            services.AddControllers().AddJsonOptions(o=>o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
         }
 
         /// <summary>
@@ -60,6 +67,8 @@ namespace Umbraco11.Course
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
                 });
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
     }
 }

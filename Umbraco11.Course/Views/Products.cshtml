@@ -2,7 +2,8 @@
 @using Umbraco.Extensions
 @using ContentModels = Umbraco11.Course.Core.Models.Umbraco
 @using Umbraco11.Course.Core.Models.Umbraco
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Products>
+@using Umbraco11.Course.ViewModels.Umbraco
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ProductListingViewModel>
 
 @{
     Layout = "master.cshtml";
@@ -25,9 +26,9 @@
         </nav>
         -->
         <div class="product-grid">
-            @if (Model.FeaturedProducts != null)
+            @if (Model.Products.Any())
             {
-                foreach (Product product in Model.FeaturedProducts)
+                foreach (Product product in Model.Products)
                 {
                     <a href="@product.Url()" class="product-grid__item" style="background-image: url('@product.Photos?.Url()')">
                         <div class="product-grid__item__overlay">

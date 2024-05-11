@@ -12,7 +12,7 @@ public class ProductListingViewComponent : ViewComponent
     }
     public IViewComponentResult Invoke(int number)
     {
-        var vm = new ProductListingViewModel()
+        var vm = new ProductListingBlockListViewModel()
         {
             Products = productService.GetUmbracoProducts(number)
         };
